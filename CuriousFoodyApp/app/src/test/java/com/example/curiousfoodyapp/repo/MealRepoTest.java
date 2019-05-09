@@ -42,6 +42,7 @@ public class MealRepoTest {
 
         repo.searchByRecipe(listener, "curry");
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 
@@ -51,6 +52,7 @@ public class MealRepoTest {
 
         repo.searchById(listener, 15552);
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 
@@ -60,6 +62,7 @@ public class MealRepoTest {
 
         repo.getRandomRecipe(listener);
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 
@@ -69,6 +72,7 @@ public class MealRepoTest {
 
         repo.filterByIngredient(listener, "Chicken");
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 
@@ -78,15 +82,17 @@ public class MealRepoTest {
 
         repo.filterByType(listener, "Seafood");
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 
     @Test
     public void filterByRegion() {
-        when(service.filterByRegion("Italy")).thenReturn(mockCall);
+        when(service.filterByRegion("China")).thenReturn(mockCall);
 
-        repo.filterByRegion(listener, "Italy");
+        repo.filterByRegion(listener, "China");
 
+        verify(listener).onStart();
         verify(mockCall).enqueue(listener);
     }
 }
