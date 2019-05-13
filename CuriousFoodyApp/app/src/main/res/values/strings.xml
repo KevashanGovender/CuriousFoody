@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">CuriousFoodyApp</string>
+    <string name="app_name">Curious Foody</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_favorites">Favorites</string>
+
+    <string name="facebook_application_id">458734888002364</string>
+    <string name="facebook_login_protocol_scheme">fb458734888002364</string>
+    <string name="sign_in_description">Please sign in</string>
+
 </resources>

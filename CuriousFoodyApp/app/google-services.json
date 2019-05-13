@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "66130889851",
+    "firebase_url": "https://curiousfoodyapp.firebaseio.com",
+    "project_id": "curiousfoodyapp",
+    "storage_bucket": "curiousfoodyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66130889851:android:5d62b78fef02715b",
+        "android_client_info": {
+          "package_name": "com.example.curiousfoodyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66130889851-fmorf7273vmojl6fv91sdbj32ba5s0on.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.curiousfoodyapp",
+            "certificate_hash": "b8a64eb25f6bdec28c0da23c14b39e852418a7c4"
+          }
+        },
+        {
+          "client_id": "66130889851-1se6tovue7af8dqttcn3eu7uiepv3tk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC0roboz3I41PDStQcs7_SD_tIWjS4soM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66130889851-1se6tovue7af8dqttcn3eu7uiepv3tk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
