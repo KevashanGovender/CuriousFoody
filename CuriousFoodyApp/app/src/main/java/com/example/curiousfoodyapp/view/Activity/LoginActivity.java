@@ -1,31 +1,24 @@
-package com.example.curiousfoodyapp.view;
+package com.example.curiousfoodyapp.view.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 
 import com.example.curiousfoodyapp.R;
 import com.example.curiousfoodyapp.viewmodel.LoginViewModel;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.MenuItem;
+
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements ILoginView {
+public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     private ProgressBar progressBar;
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -52,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
 
             if (resultCode == RESULT_OK) {
                 user = FirebaseAuth.getInstance().getCurrentUser();
-                // ...
+                startActivity(new Intent(this, AppActivity.class));
             } else {
                 System.out.println("THIS FAILED");
             }
@@ -62,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
     @Override
     public void showHome() {
         progressBar.setVisibility(View.GONE);
-        Toast.makeText(this, "Hello, " + user.getDisplayName(), Toast.LENGTH_LONG).show();
+        startActivity(new Intent(this, AppActivity.class));
     }
 
     @Override

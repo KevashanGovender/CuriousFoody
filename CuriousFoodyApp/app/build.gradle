@@ -39,7 +39,16 @@ dependencies {
     // Find the latest Facebook SDK releases here: https://goo.gl/Ce5L94
     implementation 'com.facebook.android:facebook-android-sdk:5.0.0'
 
+    def nav_version = "2.1.0-alpha04"
 
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    // For Kotlin use navigation-fragment-ktx
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation 'com.synnapps:carouselview:0.1.5'
+
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-core:2.27.0"
 

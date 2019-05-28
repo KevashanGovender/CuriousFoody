@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Curious Foody</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_random">Random</string>
+    <string name="title_search">Search</string>
     <string name="title_favorites">Favorites</string>
 
     <string name="facebook_application_id">458734888002364</string>
     <string name="facebook_login_protocol_scheme">fb458734888002364</string>
     <string name="sign_in_description">Please sign in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

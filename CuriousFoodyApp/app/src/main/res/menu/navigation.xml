@@ -9,12 +9,12 @@
     <item
         android:id="@+id/navigation_dashboard"
         android:icon="@drawable/icons8_shuffle_24"
-        android:title="@string/title_dashboard"/>
+        android:title="@string/title_random"/>
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/icons8_search_24"
-        android:title="@string/title_notifications"/>
+        android:title="@string/title_search"/>
 
     <item
         android:id="@+id/navigation_favorites"

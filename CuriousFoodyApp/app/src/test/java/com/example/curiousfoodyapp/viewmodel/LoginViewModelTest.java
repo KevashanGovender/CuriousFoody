@@ -1,6 +1,6 @@
 package com.example.curiousfoodyapp.viewmodel;
 
-import com.example.curiousfoodyapp.view.ILoginView;
+import com.example.curiousfoodyapp.view.Activity.ILoginView;
 import com.google.firebase.auth.FirebaseUser;
 
 import org.junit.Before;
@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 

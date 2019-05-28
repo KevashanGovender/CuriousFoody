@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view;
+package com.example.curiousfoodyapp.view.Activity;
 
 public interface ILoginView {
 
