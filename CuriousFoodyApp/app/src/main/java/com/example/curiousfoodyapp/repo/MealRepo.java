@@ -1,6 +1,7 @@
 package com.example.curiousfoodyapp.repo;
 
 import com.example.curiousfoodyapp.model.Meal;
+import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.service.MealDbService;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class MealRepo implements IMealRepo {
     }
 
     @Override
-    public void searchByRecipe(ICallbackListener<List<Meal>> listener, String recipe) {
+    public void searchByRecipe(ICallbackListener<Recipes> listener, String recipe) {
         listener.onStart();
         service.searchByRecipe(recipe).enqueue(listener);
     }
@@ -33,7 +34,7 @@ public class MealRepo implements IMealRepo {
     }
 
     @Override
-    public void filterByIngredient(ICallbackListener<List<Meal>> listener, String ingredient) {
+    public void filterByIngredient(ICallbackListener<Recipes> listener, String ingredient) {
         listener.onStart();
         service.filterByIngredient(ingredient).enqueue(listener);
     }

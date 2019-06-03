@@ -1,6 +1,7 @@
 package com.example.curiousfoodyapp.repo;
 
 import com.example.curiousfoodyapp.model.Meal;
+import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.service.MealDbService;
 
 import org.junit.Before;
@@ -15,6 +16,7 @@ import retrofit2.Call;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -38,12 +40,14 @@ public class MealRepoTest {
 
     @Test
     public void searchByRecipe() {
-        when(service.searchByRecipe(anyString())).thenReturn(mockCall);
+        Call<Recipes> recipesCall = mock(Call.class);
+        ICallbackListener<Recipes> recipesICallbackListener = mock(ICallbackListener.class);
+        when(service.searchByRecipe(anyString())).thenReturn(recipesCall);
 
-        repo.searchByRecipe(listener, "curry");
+        repo.searchByRecipe(recipesICallbackListener, "curry");
 
-        verify(listener).onStart();
-        verify(mockCall).enqueue(listener);
+        verify(recipesICallbackListener).onStart();
+        verify(recipesCall).enqueue(recipesICallbackListener);
     }
 
     @Test
@@ -68,12 +72,14 @@ public class MealRepoTest {
 
     @Test
     public void filterByIngredient() {
-        when(service.filterByIngredient("Chicken")).thenReturn(mockCall);
+        Call<Recipes> recipesCall = mock(Call.class);
+        ICallbackListener<Recipes> recipesICallbackListener = mock(ICallbackListener.class);
+        when(service.filterByIngredient("Chicken")).thenReturn(recipesCall);
 
-        repo.filterByIngredient(listener, "Chicken");
+        repo.filterByIngredient(recipesICallbackListener, "Chicken");
 
-        verify(listener).onStart();
-        verify(mockCall).enqueue(listener);
+        verify(recipesICallbackListener).onStart();
+        verify(recipesCall).enqueue(recipesICallbackListener);
     }
 
     @Test

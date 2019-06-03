@@ -8,10 +8,10 @@ import retrofit2.Response;
 public interface ICallbackListener<T> extends Callback<T> {
 
     @Override
-    void onResponse(@NonNull Call call, @NonNull Response response);
+    void onResponse(@NonNull Call<T> call, @NonNull Response<T> response);
 
     @Override
-    void onFailure(@NonNull Call call, @NonNull Throwable t);
+    void onFailure(@NonNull Call<T> call, @NonNull Throwable t);
 
     void onStart();
 }

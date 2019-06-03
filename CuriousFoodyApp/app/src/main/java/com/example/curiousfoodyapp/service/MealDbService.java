@@ -1,30 +1,32 @@
 package com.example.curiousfoodyapp.service;
 
 import com.example.curiousfoodyapp.model.Meal;
+import com.example.curiousfoodyapp.model.Recipes;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface MealDbService {
 
-    @GET("/search.php?s={recipe}")
-    Call<List<Meal>> searchByRecipe(@Path("recipe") String term);
+    @GET("api/json/v1/1/search.php")
+    Call<Recipes> searchByRecipe(@Query("s") String term);
 
     @GET("/lookup.php?i={id}")
-    Call<List<Meal>> searchById(@Path("id") long id);
+    Call<List<Meal>> searchById(@Query("id") long id);
 
     @GET("/random.php")
     Call<List<Meal>> getRandomRecipe();
 
-    @GET("/filter.php?i={ingredient}")
-    Call<List<Meal>> filterByIngredient(@Path("ingredient") String ingredient);
+    @GET("api/json/v1/1/filter.php")
+    Call<Recipes> filterByIngredient(@Query("i") String ingredient);
 
     @GET("/filter.php?c={type}")
-    Call<List<Meal>> filterByType(@Path("type") String type);
+    Call<List<Meal>> filterByType(@Query("type") String type);
 
     @GET("/filter.php?a={region}")
-    Call<List<Meal>> filterByRegion(@Path("region") String region);
+    Call<List<Meal>> filterByRegion(@Query("region") String region);
 }
