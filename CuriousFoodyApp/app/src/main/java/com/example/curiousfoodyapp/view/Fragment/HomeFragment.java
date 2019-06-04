@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.curiousfoodyapp.R;
 import com.example.curiousfoodyapp.model.Meal;
@@ -29,7 +30,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 import retrofit2.Retrofit;
 
-public class HomeFragment extends Fragment implements HomeView {
+public class HomeFragment extends Fragment implements HomeView, FavoriteMealView {
 
     private RecyclerView recyclerView;
     private View progressLoader;
@@ -90,9 +91,19 @@ public class HomeFragment extends Fragment implements HomeView {
 
     @Override
     public void setUpCarousal(List<Meal> meals) {
-        recyclerView.setAdapter(new RecipeCardAdapter(getContext(), meals));
+        recyclerView.setAdapter(new RecipeCardAdapter(getContext(), meals, this));
 
         progressLoader.setVisibility(View.GONE);
         contentView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void mealAdded() {
+        Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void mealRemoved() {
+        Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
     }
 }

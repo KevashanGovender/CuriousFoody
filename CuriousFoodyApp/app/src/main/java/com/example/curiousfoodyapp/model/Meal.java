@@ -3,13 +3,20 @@ package com.example.curiousfoodyapp.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@Entity(tableName = "meal_db")
 public class Meal implements Parcelable {
 
+    @PrimaryKey
     @SerializedName("idMeal")
     @Expose
+    @NonNull
     private String idMeal;
     @SerializedName("strMeal")
     @Expose

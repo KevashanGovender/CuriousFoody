@@ -28,7 +28,7 @@ import java.util.List;
 import retrofit2.Retrofit;
 
 
-public class SearchFragment extends Fragment implements SearchView {
+public class SearchFragment extends Fragment implements SearchView, FavoriteMealView {
 
     private EditText searchInput;
     private ImageView searchBtn;
@@ -74,7 +74,7 @@ public class SearchFragment extends Fragment implements SearchView {
         progressView.setVisibility(View.GONE);
         content.setVisibility(View.VISIBLE);
         searchResultTv.setVisibility(View.VISIBLE);
-        RecipeCardAdapter adapter = new RecipeCardAdapter(getContext(), meals);
+        RecipeCardAdapter adapter = new RecipeCardAdapter(getContext(), meals, this);
         searchResultTv.setAdapter(adapter);
     }
 
@@ -96,5 +96,15 @@ public class SearchFragment extends Fragment implements SearchView {
         content.setVisibility(View.GONE);
         searchResultTv.setVisibility(View.GONE);
         progressView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void mealAdded() {
+        Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void mealRemoved() {
+        Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
     }
 }

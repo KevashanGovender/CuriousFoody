@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.curiousfoodyapp.R;
 import com.example.curiousfoodyapp.model.Meal;
@@ -25,7 +26,7 @@ import java.util.List;
 import retrofit2.Retrofit;
 
 
-public class RandomFragment extends Fragment implements RandomRecipeView {
+public class RandomFragment extends Fragment implements RandomRecipeView, FavoriteMealView {
 
     private View contentView;
     private View errorView;
@@ -74,7 +75,7 @@ public class RandomFragment extends Fragment implements RandomRecipeView {
 
     @Override
     public void showRandomRecipe(List<Meal> meals) {
-        randomRecipeRv.setAdapter(new RecipeCardAdapter(getContext(), meals));
+        randomRecipeRv.setAdapter(new RecipeCardAdapter(getContext(), meals, this));
         contentView.setVisibility(View.VISIBLE);
     }
 
@@ -86,5 +87,15 @@ public class RandomFragment extends Fragment implements RandomRecipeView {
     @Override
     public void showErrorView() {
         errorView.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void mealAdded() {
+        Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void mealRemoved() {
+        Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
     }
 }
