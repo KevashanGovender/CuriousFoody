@@ -11,6 +11,6 @@ public interface IMealRepo {
     void searchById(ICallbackListener<List<Meal>> listener, long id);
     void getRandomRecipe(ICallbackListener<Recipes> listener);
     void filterByIngredient(ICallbackListener<Recipes> listener, String ingredient);
-    void filterByType(ICallbackListener<List<Meal>> listener, String type);
-    void filterByRegion(ICallbackListener<List<Meal>> listener, String region);
+    void filterByType(ICallbackListener<Recipes> listener, String type);
+    void filterByRegion(ICallbackListener<Recipes> listener, String region);
 }

@@ -44,7 +44,7 @@ public class RecipeDetailsViewModelTest {
     private RecipeDetailsViewModel viewModel;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
         viewModel = new RecipeDetailsViewModel(repo, view);
     }

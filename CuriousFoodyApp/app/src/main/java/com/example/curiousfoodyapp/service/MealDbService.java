@@ -24,9 +24,9 @@ public interface MealDbService {
     @GET("api/json/v1/1/filter.php")
     Call<Recipes> filterByIngredient(@Query("i") String ingredient);
 
-    @GET("/filter.php?c={type}")
-    Call<List<Meal>> filterByType(@Query("type") String type);
+    @GET("api/json/v1/1/filter.php")
+    Call<Recipes> filterByType(@Query("c") String type);
 
-    @GET("/filter.php?a={region}")
-    Call<List<Meal>> filterByRegion(@Query("region") String region);
+    @GET("api/json/v1/1/filter.php")
+    Call<Recipes> filterByRegion(@Query("a") String region);
 }

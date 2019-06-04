@@ -87,21 +87,25 @@ public class MealRepoTest {
 
     @Test
     public void filterByType() {
-        when(service.filterByType("Seafood")).thenReturn(mockCall);
+        Call<Recipes> recipesCall = mock(Call.class);
+        ICallbackListener<Recipes> recipesICallbackListener = mock(ICallbackListener.class);
+        when(service.filterByType("Seafood")).thenReturn(recipesCall);
 
-        repo.filterByType(listener, "Seafood");
+        repo.filterByType(recipesICallbackListener, "Seafood");
 
-        verify(listener).onStart();
-        verify(mockCall).enqueue(listener);
+        verify(recipesICallbackListener).onStart();
+        verify(recipesCall).enqueue(recipesICallbackListener);
     }
 
     @Test
     public void filterByRegion() {
-        when(service.filterByRegion("China")).thenReturn(mockCall);
+        Call<Recipes> recipesCall = mock(Call.class);
+        ICallbackListener<Recipes> recipesICallbackListener = mock(ICallbackListener.class);
+        when(service.filterByRegion("China")).thenReturn(recipesCall);
 
-        repo.filterByRegion(listener, "China");
+        repo.filterByRegion(recipesICallbackListener, "China");
 
-        verify(listener).onStart();
-        verify(mockCall).enqueue(listener);
+        verify(recipesICallbackListener).onStart();
+        verify(recipesCall).enqueue(recipesICallbackListener);
     }
 }

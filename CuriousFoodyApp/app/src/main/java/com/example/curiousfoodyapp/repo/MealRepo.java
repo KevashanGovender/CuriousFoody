@@ -40,13 +40,13 @@ public class MealRepo implements IMealRepo {
     }
 
     @Override
-    public void filterByType(ICallbackListener<List<Meal>> listener, String type) {
+    public void filterByType(ICallbackListener<Recipes> listener, String type) {
         listener.onStart();
         service.filterByType(type).enqueue(listener);
     }
 
     @Override
-    public void filterByRegion(ICallbackListener<List<Meal>> listener, String region) {
+    public void filterByRegion(ICallbackListener<Recipes> listener, String region) {
         listener.onStart();
         service.filterByRegion(region).enqueue(listener);
     }
