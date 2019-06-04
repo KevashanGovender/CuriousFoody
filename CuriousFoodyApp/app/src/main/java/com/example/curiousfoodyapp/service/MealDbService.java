@@ -18,8 +18,8 @@ public interface MealDbService {
     @GET("/lookup.php?i={id}")
     Call<List<Meal>> searchById(@Query("id") long id);
 
-    @GET("/random.php")
-    Call<List<Meal>> getRandomRecipe();
+    @GET("api/json/v1/1/random.php")
+    Call<Recipes> getRandomRecipe();
 
     @GET("api/json/v1/1/filter.php")
     Call<Recipes> filterByIngredient(@Query("i") String ingredient);

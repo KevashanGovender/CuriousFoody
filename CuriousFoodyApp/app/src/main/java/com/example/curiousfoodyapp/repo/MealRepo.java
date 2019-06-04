@@ -28,7 +28,7 @@ public class MealRepo implements IMealRepo {
     }
 
     @Override
-    public void getRandomRecipe(ICallbackListener<List<Meal>> listener) {
+    public void getRandomRecipe(ICallbackListener<Recipes> listener) {
         listener.onStart();
         service.getRandomRecipe().enqueue(listener);
     }

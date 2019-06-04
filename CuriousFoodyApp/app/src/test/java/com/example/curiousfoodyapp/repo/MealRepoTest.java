@@ -62,12 +62,15 @@ public class MealRepoTest {
 
     @Test
     public void getRandomRecipe(){
-        when(service.getRandomRecipe()).thenReturn(mockCall);
+        Call<Recipes> recipesCall = mock(Call.class);
+        ICallbackListener<Recipes> recipesICallbackListener = mock(ICallbackListener.class);
 
-        repo.getRandomRecipe(listener);
+        when(service.getRandomRecipe()).thenReturn(recipesCall);
 
-        verify(listener).onStart();
-        verify(mockCall).enqueue(listener);
+        repo.getRandomRecipe(recipesICallbackListener);
+
+        verify(recipesICallbackListener).onStart();
+        verify(recipesCall).enqueue(recipesICallbackListener);
     }
 
     @Test
