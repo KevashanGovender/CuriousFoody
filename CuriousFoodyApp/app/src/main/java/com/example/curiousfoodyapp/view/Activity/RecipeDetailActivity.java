@@ -2,6 +2,7 @@ package com.example.curiousfoodyapp.view.Activity;
 
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -51,6 +52,8 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeDet
         progressLoader = findViewById(R.id.full_screen_loader);
         errorView = findViewById(R.id.error_view);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         ingredientsRv.setLayoutManager(layoutManager);
 
@@ -61,6 +64,15 @@ public class RecipeDetailActivity extends AppCompatActivity implements RecipeDet
         RecipeDetailsViewModel viewModel = new RecipeDetailsViewModel(repo, this);
         viewModel.checkIntent(getIntent());
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public void hideProgressLoader() {

@@ -12,6 +12,12 @@ import com.example.curiousfoodyapp.service.MealDbService;
 import com.example.curiousfoodyapp.service.RetrofitClient;
 import com.example.curiousfoodyapp.view.adapter.RecipeCardAdapter;
 import com.example.curiousfoodyapp.viewmodel.HomeViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -57,8 +63,15 @@ public class HomeFragment extends Fragment implements HomeView {
 
         MealRepo repo = new MealRepo(service);
 
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
         viewModel = new HomeViewModel(repo, this);
-        viewModel.getRecipes("chicken");
+
+        DocumentReference topic = db.collection("RecipeOfTheWeekTopic").document("seIcmu69ULnN8qM65dzo");
+        topic.get().addOnCompleteListener(task -> {
+            DocumentSnapshot doc = task.getResult();
+            viewModel.getRecipes(doc.get("topic").toString());
+        }).addOnFailureListener(e -> viewModel.getRecipes("chicken"));
 
         return view;
     }
