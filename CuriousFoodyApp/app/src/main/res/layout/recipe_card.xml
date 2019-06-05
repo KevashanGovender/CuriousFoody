@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login_screen" />
+        app:srcCompat="@drawable/login_screen"
+        android:contentDescription="@string/image_picture_cd" />
 
     <TextView
         android:id="@+id/recipie_name"
@@ -26,7 +27,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toStartOf="@+id/favBtn"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,5 +39,6 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/recipie_name"
-        app:srcCompat="@drawable/icons8_heart_outline_24" />
+        app:srcCompat="@drawable/icons8_heart_outline_24"
+        android:contentDescription="@string/favorite_icon_cd"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

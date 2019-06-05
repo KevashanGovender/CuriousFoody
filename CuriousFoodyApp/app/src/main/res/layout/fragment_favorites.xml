@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".view.Fragment.FavoritesFragment">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favorite_recipes_rv"
         android:layout_width="match_parent"

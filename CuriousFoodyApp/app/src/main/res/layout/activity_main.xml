@@ -42,6 +42,6 @@
             android:padding="8dp"
             android:textColor="@color/colorPrimaryDark"
             android:layout_gravity="center_vertical"
-            android:text="Sign in"/>
+            android:text="@string/sign_in_btn"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

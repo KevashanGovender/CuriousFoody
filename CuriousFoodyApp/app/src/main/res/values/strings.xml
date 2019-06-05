@@ -9,7 +9,15 @@
     <string name="facebook_login_protocol_scheme">fb458734888002364</string>
     <string name="sign_in_description">Please sign in</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_btn">Sign in</string>
+    <string name="error_message">Something went wrong, please try again</string>
+    <string name="recipe_of_the_week">Recipes of the week</string>
+    <string name="edit_text_desc">Type here</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="error_cd">error_icon</string>
+    <string name="search_cd">search icon</string>
+    <string name="image_picture_cd">image picture</string>
+    <string name="favorite_icon_cd">favorite icon</string>
 
 </resources>

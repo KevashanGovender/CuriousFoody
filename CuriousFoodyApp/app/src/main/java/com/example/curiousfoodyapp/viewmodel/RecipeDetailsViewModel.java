@@ -29,9 +29,10 @@ public class RecipeDetailsViewModel implements ICallbackListener<Recipes> {
 
     public void checkIntent(Intent intent) {
         if(intent != null){
-            if(intent.getStringExtra("RecipeName") != null &&
-                    !intent.getStringExtra("RecipeName").isEmpty()) {
+            if(intent.getStringExtra("RecipeName") != null) {
                 repo.searchByRecipe(this, intent.getStringExtra("RecipeName"));
+            } else if(intent.getStringExtra("type").equals("random")){
+                repo.getRandomRecipe(this);
             }
         }
     }

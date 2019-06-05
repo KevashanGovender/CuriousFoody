@@ -14,7 +14,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:textColor="@color/colorBlack"
-        android:text="1 pound"
         app:layout_constraintEnd_toStartOf="@+id/ingredient_quantity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:textColor="@color/colorBlack"
-        android:text="penne rigate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ingreditent_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
