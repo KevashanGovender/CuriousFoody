@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,7 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class FavoritesFragment extends Fragment implements DisplayFavoriteMealView {
+public class FavoritesFragment extends Fragment implements FavoriteMealView {
 
     private RecyclerView favoriteRecipeRv;
     private FavoritesViewModel viewModel;
@@ -57,25 +58,20 @@ public class FavoritesFragment extends Fragment implements DisplayFavoriteMealVi
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         favoriteRecipeRv.setLayoutManager(layoutManager);
 
-        GetFavoriteMealsTask task = new GetFavoriteMealsTask(MealDatabase.getInstance(getContext()), this);
+        GetFavoriteMealsTask task = new GetFavoriteMealsTask(MealDatabase.getInstance(getContext()));
 
-        viewModel.getFavoriteMeals(task);
-    }
+        viewModel.getFavoriteMeals(task).observe(this, mealList -> viewModel.check(mealList));
 
-    @Override
-    public void showFavorites(LiveData<List<Meal>> meals) {
-        meals.observe(this, mealList -> {
+        viewModel.getFavorites().observe(this, mealList -> {
             favoriteRecipeRv.setVisibility(View.VISIBLE);
             RecipeCardAdapter adapter = new RecipeCardAdapter(getContext(), mealList, this);
             favoriteRecipeRv.setAdapter(adapter);
         });
-    }
 
-    @Override
-    public void showNoFavorites() {
-        favoriteRecipeRv.setVisibility(View.GONE);
-        Toast.makeText(getContext(), "No favorites, why don't you add some", Toast.LENGTH_SHORT).show();
-
+        viewModel.getNoFavorites().observe(this, mealList -> {
+            favoriteRecipeRv.setVisibility(View.GONE);
+            Toast.makeText(getContext(), "No favorites, why don't you add some", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override

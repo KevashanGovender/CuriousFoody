@@ -8,7 +8,6 @@ import com.example.curiousfoodyapp.database.FavoriteMealDao;
 import com.example.curiousfoodyapp.database.MealDatabase;
 import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.tasks.GetFavoriteMealsTask;
-import com.example.curiousfoodyapp.view.Fragment.DisplayFavoriteMealView;
 
 import org.junit.Before;
 import org.junit.Test;

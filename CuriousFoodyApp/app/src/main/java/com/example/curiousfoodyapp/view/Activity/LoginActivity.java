@@ -45,7 +45,9 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
 
             if (resultCode == RESULT_OK) {
                 user = FirebaseAuth.getInstance().getCurrentUser();
-                startActivity(new Intent(this, AppActivity.class));
+                Intent i = new Intent(this, AppActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(i);
             } else {
                 System.out.println("THIS FAILED");
             }
