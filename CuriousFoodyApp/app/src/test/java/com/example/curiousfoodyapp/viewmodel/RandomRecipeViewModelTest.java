@@ -74,7 +74,6 @@ public class RandomRecipeViewModelTest {
         viewModel.onResponse(mockCall, response);
 
         verify(view).showRandomRecipe(captor.capture());
-        verify(view).hideProgressView();
         assertEquals(1, captor.getValue().size());
     }
 

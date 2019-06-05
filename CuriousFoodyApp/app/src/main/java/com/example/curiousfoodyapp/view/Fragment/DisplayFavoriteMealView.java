@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface DisplayFavoriteMealView extends FavoriteMealView {
 
-    void showFavorites(List<Meal> meals);
+    void showFavorites(LiveData<List<Meal>> meals);
     void showNoFavorites();
 }

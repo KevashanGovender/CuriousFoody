@@ -75,17 +75,14 @@ public class RandomFragment extends Fragment implements RandomRecipeView, Favori
 
     @Override
     public void showRandomRecipe(List<Meal> meals) {
+        progressView.setVisibility(View.GONE);
         randomRecipeRv.setAdapter(new RecipeCardAdapter(getContext(), meals, this));
         contentView.setVisibility(View.VISIBLE);
     }
 
     @Override
-    public void hideProgressView() {
-        progressView.setVisibility(View.GONE);
-    }
-
-    @Override
     public void showErrorView() {
+        progressView.setVisibility(View.GONE);
         errorView.setVisibility(View.VISIBLE);
     }
 

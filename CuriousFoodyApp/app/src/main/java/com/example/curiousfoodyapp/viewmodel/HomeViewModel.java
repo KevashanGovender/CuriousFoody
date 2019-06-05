@@ -38,7 +38,7 @@ public class HomeViewModel implements ICallbackListener<Recipes> {
 
     @Override
     public void onStart() {
-        view.showLoader();
+        view.showProgressView();
     }
 
     private List<Meal> filterList(List<Meal> meals) {

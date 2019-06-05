@@ -21,7 +21,7 @@
             android:fontFamily="sans-serif-thin"
             android:gravity="top"
             android:padding="16dp"
-            android:text="Recipe of the week"
+            android:text="Recipes of the week"
             android:textAppearance="@style/recipes_of_"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

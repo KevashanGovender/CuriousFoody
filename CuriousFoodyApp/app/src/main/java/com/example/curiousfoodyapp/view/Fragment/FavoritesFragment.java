@@ -63,16 +63,18 @@ public class FavoritesFragment extends Fragment implements DisplayFavoriteMealVi
     }
 
     @Override
-    public void showFavorites(List<Meal> meals) {
-        favoriteRecipeRv.setVisibility(View.VISIBLE);
-        RecipeCardAdapter adapter = new RecipeCardAdapter(getContext(), meals, this);
-        favoriteRecipeRv.setAdapter(adapter);
+    public void showFavorites(LiveData<List<Meal>> meals) {
+        meals.observe(this, mealList -> {
+            favoriteRecipeRv.setVisibility(View.VISIBLE);
+            RecipeCardAdapter adapter = new RecipeCardAdapter(getContext(), mealList, this);
+            favoriteRecipeRv.setAdapter(adapter);
+        });
     }
 
     @Override
     public void showNoFavorites() {
         favoriteRecipeRv.setVisibility(View.GONE);
-        Toast.makeText(getContext(), "No favorites, why dont you add some", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "No favorites, why don't you add some", Toast.LENGTH_SHORT).show();
 
     }
 

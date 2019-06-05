@@ -57,7 +57,7 @@ public class HomeViewModelTest {
     public void onStartShouldShowProgressLoader() {
         viewModel.onStart();
 
-        verify(view).showLoader();
+        verify(view).showProgressView();
     }
 
     @Test

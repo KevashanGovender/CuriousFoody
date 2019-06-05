@@ -4,9 +4,6 @@ import com.example.curiousfoodyapp.model.Meal;
 
 import java.util.List;
 
-public interface HomeView {
-
-    void showLoader();
-    void showErrorView();
+public interface HomeView extends BaseView {
     void setUpCarousal(List<Meal>meals);
 }

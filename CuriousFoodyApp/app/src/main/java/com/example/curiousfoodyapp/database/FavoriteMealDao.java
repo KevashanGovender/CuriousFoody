@@ -17,7 +17,7 @@ public interface FavoriteMealDao {
     void insertMeal(Meal meal);
 
     @Query("SELECT * FROM meal_db")
-    List<Meal> getFavorites();
+    LiveData<List<Meal>> getFavorites();
 
     @Query("SELECT * FROM meal_db WHERE idMeal=:id ")
     Meal isMealAFavorite(String id);

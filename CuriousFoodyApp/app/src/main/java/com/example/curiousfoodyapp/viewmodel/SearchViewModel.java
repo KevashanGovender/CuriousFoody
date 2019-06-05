@@ -45,9 +45,11 @@ public class SearchViewModel implements ICallbackListener<Recipes> {
     private List<Meal> filterResponse(List<Meal> meals) {
         List<Meal> filteredMeals = new ArrayList<>();
 
-        for(Meal m : meals){
-            if(m != null){
-                filteredMeals.add(m);
+        if(meals != null){
+            for(Meal m : meals){
+                if(m != null){
+                    filteredMeals.add(m);
+                }
             }
         }
 

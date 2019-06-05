@@ -6,6 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.PagerSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+
 import com.example.curiousfoodyapp.R;
 import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.repo.MealRepo;
@@ -13,21 +20,12 @@ import com.example.curiousfoodyapp.service.MealDbService;
 import com.example.curiousfoodyapp.service.RetrofitClient;
 import com.example.curiousfoodyapp.view.adapter.RecipeCardAdapter;
 import com.example.curiousfoodyapp.viewmodel.HomeViewModel;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.PagerSnapHelper;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SnapHelper;
 import retrofit2.Retrofit;
 
 public class HomeFragment extends Fragment implements HomeView, FavoriteMealView {
@@ -78,7 +76,9 @@ public class HomeFragment extends Fragment implements HomeView, FavoriteMealView
     }
 
     @Override
-    public void showLoader() {
+    public void showProgressView() {
+        errorView.setVisibility(View.GONE);
+        contentView.setVisibility(View.GONE);
         progressLoader.setVisibility(View.VISIBLE);
     }
 

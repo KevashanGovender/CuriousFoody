@@ -28,13 +28,11 @@ public class RandomRecipeViewModel implements ICallbackListener<Recipes> {
 
     @Override
     public void onResponse(@NonNull Call<Recipes> call, @NonNull Response<Recipes> response) {
-        view.hideProgressView();
         view.showRandomRecipe(response.body().getMeals());
     }
 
     @Override
     public void onFailure(@NonNull Call<Recipes> call, @NonNull Throwable t) {
-        view.hideProgressView();
         view.showErrorView();
     }
 

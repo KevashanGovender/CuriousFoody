@@ -38,7 +38,7 @@ public class SearchFragment extends Fragment implements SearchView, FavoriteMeal
     private View content;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
@@ -80,6 +80,8 @@ public class SearchFragment extends Fragment implements SearchView, FavoriteMeal
 
     @Override
     public void noSearchResults() {
+        progressView.setVisibility(View.GONE);
+        content.setVisibility(View.VISIBLE);
         Toast.makeText(getContext(), "Sorry couldnt find anything", Toast.LENGTH_LONG).show();
     }
 

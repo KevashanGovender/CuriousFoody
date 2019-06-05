@@ -41,7 +41,7 @@ public class FavoritesViewModelTest {
 
     @Test
     public void getFavoritesShouldFetchFavoriteRecipes() {
-        FavoritesViewModel viewModel = new FavoritesViewModel(application);
+        FavoritesViewModel viewModel = new FavoritesViewModel();
 
         viewModel.getFavoriteMeals(task);
 

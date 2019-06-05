@@ -10,7 +10,7 @@ import com.example.curiousfoodyapp.view.Fragment.DisplayFavoriteMealView;
 
 import java.util.List;
 
-public class GetFavoriteMealsTask extends AsyncTask<Void, Void, List<Meal>> {
+public class GetFavoriteMealsTask extends AsyncTask<Void, Void, LiveData<List<Meal>>> {
 
     private MealDatabase database;
     private DisplayFavoriteMealView view;
@@ -21,16 +21,16 @@ public class GetFavoriteMealsTask extends AsyncTask<Void, Void, List<Meal>> {
     }
 
     @Override
-    protected List<Meal> doInBackground(Void... voids) {
+    protected LiveData<List<Meal>> doInBackground(Void... voids) {
         return database.dao().getFavorites();
     }
 
     @Override
-    protected void onPostExecute(List<Meal> listLiveData) {
+    protected void onPostExecute(LiveData<List<Meal>> listLiveData) {
         super.onPostExecute(listLiveData);
 
-        if(listLiveData != null){
-            if(listLiveData.size() > 0){
+        if(listLiveData.getValue() != null){
+            if(listLiveData.getValue().size() > 0){
                 view.showFavorites(listLiveData);
             }
         } else {

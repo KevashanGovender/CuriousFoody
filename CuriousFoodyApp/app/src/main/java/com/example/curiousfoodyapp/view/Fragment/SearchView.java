@@ -4,13 +4,9 @@ import com.example.curiousfoodyapp.model.Meal;
 
 import java.util.List;
 
-public interface SearchView {
+public interface SearchView extends BaseView{
 
     void showSearchResults(List<Meal> meals);
 
     void noSearchResults();
-
-    void showErrorView();
-
-    void showProgressView();
 }
