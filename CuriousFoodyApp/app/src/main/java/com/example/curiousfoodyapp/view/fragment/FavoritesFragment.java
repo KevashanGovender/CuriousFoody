@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view.Fragment;
+package com.example.curiousfoodyapp.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import com.example.curiousfoodyapp.R;
 import com.example.curiousfoodyapp.database.MealDatabase;
-import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.tasks.GetFavoriteMealsTask;
 import com.example.curiousfoodyapp.view.adapter.RecipeCardAdapter;
 import com.example.curiousfoodyapp.viewmodel.FavoritesViewModel;
@@ -17,14 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
 
 public class FavoritesFragment extends Fragment implements FavoriteMealView {
 

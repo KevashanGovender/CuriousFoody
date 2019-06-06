@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view.Fragment;
+package com.example.curiousfoodyapp.view.fragment;
 
 public interface FavoriteMealView {
 

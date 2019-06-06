@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view.Fragment;
+package com.example.curiousfoodyapp.view.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,6 @@ import com.example.curiousfoodyapp.repo.MealRepo;
 import com.example.curiousfoodyapp.service.MealDbService;
 import com.example.curiousfoodyapp.service.RetrofitClient;
 import com.example.curiousfoodyapp.view.adapter.RecipeCardAdapter;
-import com.example.curiousfoodyapp.viewmodel.RandomRecipeViewModel;
 import com.example.curiousfoodyapp.viewmodel.SearchViewModel;
 
 import androidx.annotation.NonNull;

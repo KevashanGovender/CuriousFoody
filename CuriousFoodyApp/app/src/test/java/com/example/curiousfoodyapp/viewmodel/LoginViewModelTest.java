@@ -1,6 +1,6 @@
 package com.example.curiousfoodyapp.viewmodel;
 
-import com.example.curiousfoodyapp.view.Activity.ILoginView;
+import com.example.curiousfoodyapp.view.activity.ILoginView;
 import com.google.firebase.auth.FirebaseUser;
 
 import org.junit.Before;

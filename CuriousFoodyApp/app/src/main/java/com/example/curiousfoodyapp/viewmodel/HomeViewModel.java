@@ -4,7 +4,7 @@ import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.repo.ICallbackListener;
 import com.example.curiousfoodyapp.repo.IMealRepo;
-import com.example.curiousfoodyapp.view.Fragment.HomeView;
+import com.example.curiousfoodyapp.view.fragment.HomeView;
 
 import java.util.List;
 

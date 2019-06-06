@@ -6,7 +6,7 @@ import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.repo.ICallbackListener;
 import com.example.curiousfoodyapp.repo.IMealRepo;
-import com.example.curiousfoodyapp.view.Fragment.SearchView;
+import com.example.curiousfoodyapp.view.fragment.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;

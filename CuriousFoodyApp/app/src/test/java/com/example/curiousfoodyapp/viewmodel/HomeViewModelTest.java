@@ -3,7 +3,7 @@ package com.example.curiousfoodyapp.viewmodel;
 import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.repo.IMealRepo;
-import com.example.curiousfoodyapp.view.Fragment.HomeView;
+import com.example.curiousfoodyapp.view.fragment.HomeView;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp;
+package com.example.curiousfoodyapp.view.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -7,7 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-import com.example.curiousfoodyapp.view.Activity.RecipeDetailActivity;
+import com.example.curiousfoodyapp.R;
+import com.example.curiousfoodyapp.view.activity.RecipeDetailActivity;
 
 /**
  * Implementation of App Widget functionality.

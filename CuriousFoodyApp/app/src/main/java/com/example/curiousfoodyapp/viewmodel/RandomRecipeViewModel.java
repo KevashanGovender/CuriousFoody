@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.repo.ICallbackListener;
 import com.example.curiousfoodyapp.repo.IMealRepo;
-import com.example.curiousfoodyapp.view.Fragment.RandomRecipeView;
+import com.example.curiousfoodyapp.view.fragment.RandomRecipeView;
 
 import retrofit2.Call;
 import retrofit2.Response;

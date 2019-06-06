@@ -5,7 +5,7 @@ import android.content.Intent;
 import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.model.Recipes;
 import com.example.curiousfoodyapp.repo.IMealRepo;
-import com.example.curiousfoodyapp.view.Activity.RecipeDetailView;
+import com.example.curiousfoodyapp.view.activity.RecipeDetailView;
 
 import org.junit.Before;
 import org.junit.Ignore;

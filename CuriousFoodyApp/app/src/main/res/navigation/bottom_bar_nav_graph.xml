@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.curiousfoodyapp.view.Fragment.HomeFragment"
+        android:name="com.example.curiousfoodyapp.view.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.curiousfoodyapp.view.Fragment.RandomFragment"
+        android:name="com.example.curiousfoodyapp.view.fragment.RandomFragment"
         android:label="fragment_random"
         tools:layout="@layout/fragment_random" />
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.curiousfoodyapp.view.Fragment.SearchFragment"
+        android:name="com.example.curiousfoodyapp.view.fragment.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="com.example.curiousfoodyapp.view.Fragment.FavoritesFragment"
+        android:name="com.example.curiousfoodyapp.view.fragment.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
 </navigation>

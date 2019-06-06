@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 import com.example.curiousfoodyapp.database.MealDatabase;
 import com.example.curiousfoodyapp.model.Meal;
-import com.example.curiousfoodyapp.view.Fragment.FavoriteMealView;
+import com.example.curiousfoodyapp.view.fragment.FavoriteMealView;
 
 public class InsertMealTask extends AsyncTask<Meal, Void, Void> {
 

@@ -3,7 +3,7 @@ package com.example.curiousfoodyapp.tasks;
 import android.os.AsyncTask;
 
 import com.example.curiousfoodyapp.database.MealDatabase;
-import com.example.curiousfoodyapp.view.Fragment.FavoriteMealView;
+import com.example.curiousfoodyapp.view.fragment.FavoriteMealView;
 
 public class DeleteMealTask extends AsyncTask<String, Void, Void> {
 

@@ -15,8 +15,8 @@ import com.example.curiousfoodyapp.model.Meal;
 import com.example.curiousfoodyapp.tasks.CheckMealTask;
 import com.example.curiousfoodyapp.tasks.DeleteMealTask;
 import com.example.curiousfoodyapp.tasks.InsertMealTask;
-import com.example.curiousfoodyapp.view.Activity.RecipeDetailActivity;
-import com.example.curiousfoodyapp.view.Fragment.FavoriteMealView;
+import com.example.curiousfoodyapp.view.activity.RecipeDetailActivity;
+import com.example.curiousfoodyapp.view.fragment.FavoriteMealView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

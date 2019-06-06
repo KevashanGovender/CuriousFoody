@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view.Activity;
+package com.example.curiousfoodyapp.view.activity;
 
 import com.example.curiousfoodyapp.model.Meal;
 

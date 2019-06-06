@@ -1,4 +1,4 @@
-package com.example.curiousfoodyapp.view.Activity;
+package com.example.curiousfoodyapp.view.activity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
