@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "66130889851-40nqppb243fmfsqols20alnjp2l164r3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.curiousfoodyapp",
+            "certificate_hash": "8244d91c693e520fb4a3e257eb242b5b3251f713"
+          }
+        },
+        {
           "client_id": "66130889851-fmorf7273vmojl6fv91sdbj32ba5s0on.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
